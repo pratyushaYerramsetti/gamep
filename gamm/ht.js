@@ -13,7 +13,7 @@ $(document).ready(function () {
         }
         else if (rand == 2) {
             $('#obstacles').append($('<img src="flyingbird.gif" id="flying">').animate(
-                { "right": "80%" }, 5000, "linear",
+                { "right": "90%" }, 5000, "linear",
                 function () {
                     $(this).remove();
                 })
@@ -43,11 +43,31 @@ $(document).ready(function () {
         var x = a.keyCode;
         if (x == 38) {//key up
             $('#trex')
-                .animate({ bottom: "-180px" }, 500, 'linear')
+                .animate({ bottom: "-10px" }, 500, 'linear')
         }
         else if (x == 40) {     //key down
             $('#trex')
-                .animate({ bottom: "-650px" }, 500, 'linear')
+                .animate({ bottom: "-180px" }, 500, 'linear')
         }
-    }); 
+    });
+    setInterval(function(){
+        var trex_pos = $("#trex").position();
+
+
+    })
+    var score=0;
+    trex_pos = $("#trex").position();
+    flying_pos = $("#flying").position();
+    obs_pos = $("#obstacle").position();
+    coinup_pos = $("#coinup").position();
+    coindn_pos = $("#coindn").position();
+    setInterval(function(){
+            if(trex_pos >= obs_pos){
+                alert("game over");
+
+            }
+
+    });
+
+ 
 });
