@@ -13,7 +13,7 @@ $(document).ready(function () {
         }
         else if (rand == 2) {
             $('#obstacles').append($('<img src="flyingbird.gif" id="flying">').animate(
-                { "right": "90%" }, 5000, "linear",
+                { "right": "80%" }, 5000, "linear",
                 function () {
                     $(this).remove();
                 })
