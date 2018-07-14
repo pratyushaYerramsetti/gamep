@@ -1,0 +1,75 @@
+#game-shell{
+    margin: 20% 10% 10% 10%;
+    border-bottom: 2px solid black;
+    position: relative;
+    height:90px;
+}
+body{
+    background-color: #efefee;
+     background-image: url('sand.jpg'); 
+
+}
+#trex{
+    width: 100px;
+    position: absolute;
+    bottom: -280px;
+    left: 20px;
+    z-index: 12;
+}
+#obstacles{
+    width:20px;
+    height: 390px;
+
+}
+@keyframes jump {
+    0% {bottom:-20px;}
+    50%{bottom:160px;}
+    100%{bottom:-20px;}
+}
+.jump{
+    animation:600 jump ease-in-out;
+}
+.obstacle{
+    position : absolute;
+    width:100px;
+    height:100px;
+    /* background-color: black; */
+    /* background-image: url("plantddd.jpg"); */
+    bottom: -90px;
+    z-index: 10;
+}
+.flying
+{
+    position: absolute;
+    width:100px;
+    height:100px;
+    bottom:-10px;
+    z-index: 10;
+
+}
+.coinup
+{
+    position: absolute;
+    width:40px;
+    height:40px;
+    border-radius:20px;
+    z-index: 10;
+}
+.coindn
+{
+    position : absolute;
+    width:40px;
+    height:40px;
+    /* background-color: black; */
+    /* background-image: url("plantddd.jpg"); */
+    bottom: -90px;
+    z-index: 10;
+}
+#road{
+    margin-top: -100px;
+    margin-bottom: 90px;
+    border-top: 2px white;
+    background-color:white;
+    border-bottom: green;
+}
+
